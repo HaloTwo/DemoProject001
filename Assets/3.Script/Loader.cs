@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Loader : MonoBehaviour
@@ -66,5 +67,8 @@ public class Loader : MonoBehaviour
             LoadImage.color = new Color(LoadImage.color.r, LoadImage.color.g, LoadImage.color.b, alpha);
             yield return null;
         }
+
+
+        SceneManager.LoadScene("Main",LoadSceneMode.Single);
     }
 }
